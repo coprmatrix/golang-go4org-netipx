@@ -1,0 +1,12 @@
+<services>
+  <service name="go2rpm" mode="manual">
+     <param name="goipath">github.com/go4org/netipx</param>
+     <param name="name">golang-go4org-netipx</param>
+  </service>
+  <service name="perl_regex" mode="manual">
+     <param name="regexfile">regex.pl</param>
+     <param name="file">*.spec</param>
+  </service>
+  <service name="download_files" mode="manual">
+  </service>
+</services>

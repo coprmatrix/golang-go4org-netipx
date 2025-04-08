@@ -1,11 +1,15 @@
 <services>
-  <service name="go2rpm" mode="manual">
-     <param name="goipath">github.com/go4org/netipx</param>
+  <service name="obs_scm">
+    <param name="url">https://github.com/go4org/netipx.git</param>
+    <param name="scm">git</param>
+    <param name="revision">refs/heads/main</param>
+    <param name="version">main</param>
+    <param name="changesgenerate">enable</param>
+    <param name="changesauthor">zuhhaga@gmail.com</param>
   </service>
-  <service name="perl_regex" mode="manual">
-     <param name="regexfile">regex.pl</param>
-     <param name="file">*.spec</param>
-  </service>
-  <service name="download_files" mode="manual">
+  <service name="tar" mode="buildtime"/>
+  <service name="recompress" mode="buildtime">
+     <param name="compression">gz</param>
+     <param name="file">*.tar</param>
   </service>
 </services>
